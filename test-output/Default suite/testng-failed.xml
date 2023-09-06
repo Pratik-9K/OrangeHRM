@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="projectMaven.MavenMaven.SelPIM">
+        <methods>
+          <include name="CloseH"/>
+          <include name="Tc7"/>
+          <include name="Tc8"/>
+          <include name="Tc9"/>
+          <include name="Tc10"/>
+          <include name="LaunchPIM"/>
+        </methods>
+      </class> <!-- projectMaven.MavenMaven.SelPIM -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

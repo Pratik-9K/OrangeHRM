@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-09-06T02:51:42 IST" name="Default suite" finished-at="2023-09-06T02:54:15 IST" duration-ms="152586">
+    <groups>
+    </groups>
+    <test started-at="2023-09-06T02:51:42 IST" name="Default test" finished-at="2023-09-06T02:54:15 IST" duration-ms="152586">
+      <class name="projectMaven.MavenMaven.SelPIM">
+        <test-method is-config="true" signature="LaunchPIM()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:51:42 IST" name="LaunchPIM" finished-at="2023-09-06T02:52:03 IST" duration-ms="20613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPIM -->
+        <test-method signature="Tc5()[pri:1, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:03 IST" name="Tc5" finished-at="2023-09-06T02:52:04 IST" duration-ms="716" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc5 -->
+        <test-method is-config="true" signature="CloseH()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:04 IST" name="CloseH" finished-at="2023-09-06T02:52:04 IST" duration-ms="216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseH -->
+        <test-method is-config="true" signature="LaunchPIM()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:04 IST" name="LaunchPIM" finished-at="2023-09-06T02:52:23 IST" duration-ms="19251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPIM -->
+        <test-method signature="Tc6()[pri:2, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:23 IST" name="Tc6" finished-at="2023-09-06T02:52:30 IST" duration-ms="6304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc6 -->
+        <test-method is-config="true" signature="CloseH()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:30 IST" name="CloseH" finished-at="2023-09-06T02:52:30 IST" duration-ms="115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseH -->
+        <test-method is-config="true" signature="LaunchPIM()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:30 IST" name="LaunchPIM" finished-at="2023-09-06T02:52:49 IST" duration-ms="19552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPIM -->
+        <test-method signature="Tc7()[pri:3, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:49 IST" name="Tc7" finished-at="2023-09-06T02:52:56 IST" duration-ms="6401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc7 -->
+        <test-method is-config="true" signature="CloseH()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:56 IST" name="CloseH" finished-at="2023-09-06T02:52:56 IST" duration-ms="152" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseH -->
+        <test-method is-config="true" signature="LaunchPIM()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:52:56 IST" name="LaunchPIM" finished-at="2023-09-06T02:53:15 IST" duration-ms="19344" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPIM -->
+        <test-method signature="Tc8()[pri:4, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:53:15 IST" name="Tc8" finished-at="2023-09-06T02:53:23 IST" duration-ms="7837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc8 -->
+        <test-method is-config="true" signature="CloseH()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:53:23 IST" name="CloseH" finished-at="2023-09-06T02:53:23 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseH -->
+        <test-method is-config="true" signature="LaunchPIM()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:53:23 IST" name="LaunchPIM" finished-at="2023-09-06T02:53:44 IST" duration-ms="20412" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPIM -->
+        <test-method signature="Tc9()[pri:5, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:53:44 IST" name="Tc9" finished-at="2023-09-06T02:53:51 IST" duration-ms="7837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc9 -->
+        <test-method is-config="true" signature="CloseH()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:53:51 IST" name="CloseH" finished-at="2023-09-06T02:53:52 IST" duration-ms="180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseH -->
+        <test-method is-config="true" signature="LaunchPIM()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:53:52 IST" name="LaunchPIM" finished-at="2023-09-06T02:54:12 IST" duration-ms="19899" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchPIM -->
+        <test-method signature="Tc10()[pri:6, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:54:12 IST" name="Tc10" finished-at="2023-09-06T02:54:15 IST" duration-ms="3341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Tc10 -->
+        <test-method is-config="true" signature="CloseH()[pri:0, instance:projectMaven.MavenMaven.SelPIM@506ae4d4]" started-at="2023-09-06T02:54:15 IST" name="CloseH" finished-at="2023-09-06T02:54:15 IST" duration-ms="174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseH -->
+      </class> <!-- projectMaven.MavenMaven.SelPIM -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
