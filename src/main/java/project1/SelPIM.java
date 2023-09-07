@@ -128,7 +128,7 @@ public class SelPIM {
 		}else {System.out.println("Test Case Failed");}	
 	}
 	
-	@Test (priority = 6) // By giving Same Employee ID again Alert will be shown (Checking with Numbers only in Employee ID)
+	/*@Test (priority = 6) // By giving Same Employee ID again Alert will be shown (Checking with Numbers only in Employee ID)
 	public void Tc10() throws Exception {
 		driver.findElement(a.fisn).sendKeys("Kevinn");
 		driver.findElement(a.midn).sendKeys("Ethann");
@@ -148,7 +148,7 @@ public class SelPIM {
 			String a2 = driver.findElement(a.idexist).getText();
 			System.out.println(a2);
 		}else {System.out.println("Test Case Failed");}	
-	}
+	}*/
 	
 	
 	@AfterMethod

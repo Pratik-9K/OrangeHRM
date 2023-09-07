@@ -3,16 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="projectMaven.MavenMaven.SelPIM">
+      <class name="project1.SelPIM">
         <methods>
+          <include name="LaunchPIM"/>
           <include name="CloseH"/>
           <include name="Tc7"/>
-          <include name="Tc8"/>
           <include name="Tc9"/>
-          <include name="Tc10"/>
-          <include name="LaunchPIM"/>
+          <include name="Tc8"/>
         </methods>
-      </class> <!-- projectMaven.MavenMaven.SelPIM -->
+      </class> <!-- project1.SelPIM -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
