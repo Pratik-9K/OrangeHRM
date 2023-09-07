@@ -13,6 +13,11 @@ public class OrHRMElementso {
 	By invalert = By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p");
 	By hreq = By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span");
 	By forgpwd = By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p");
+	By forgpuid = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[1]/div/div[2]/input");
+	By forgpreq = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[1]/div/span");
+	By forgpcanc = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[2]/button[1]");
+	By restpass = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[2]/button[2]");
+	By restdone = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/h6");
 	
 	
 	// Selecting PIM Module & Add Employee

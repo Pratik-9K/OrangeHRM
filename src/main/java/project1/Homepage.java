@@ -86,6 +86,57 @@ public class Homepage {
 		}else {System.out.println("Test Case Failed");}	
 	}
 	
+	@Test (priority = 5) // verifying forgot pass cancel option (aft cancel, Homepage login button detected, cancel works)
+	public void ForgP1() throws Exception {
+		driver.findElement(a.forgpwd).click();
+		Thread.sleep(500);
+		driver.findElement(a.forgpcanc).click();
+		Thread.sleep(1000);
+		
+		boolean homeLogin = driver.findElement(a.hlogbt).isDisplayed();
+		SoftAssert s5 = new SoftAssert();
+		s5.assertEquals(homeLogin, true);
+		if (homeLogin==true) {
+			System.out.println("Test Case Success");
+		}else {System.out.println("Test Case Failed");}	
+	}
+	
+	@Test (priority = 5) // verifying forgot pass with empty UID
+	public void ForgP2() throws Exception {
+		driver.findElement(a.forgpwd).click();
+		Thread.sleep(500);
+		driver.findElement(a.restpass).click();
+		Thread.sleep(1000);
+		
+		boolean passReq = driver.findElement(a.forgpreq).isDisplayed();
+		SoftAssert s6 = new SoftAssert();
+		s6.assertEquals(passReq, true);
+		if (passReq==true) {
+			System.out.println("Test Case Success");
+			String s = driver.findElement(a.forgpreq).getText();
+			System.out.println(s);
+		}else {System.out.println("Test Case Failed");}	
+	}
+	
+	@Test (priority = 6) // verifying forgot pass with empty UID
+	public void ForgP3() throws Exception {
+		driver.findElement(a.forgpwd).click();
+		Thread.sleep(500);
+		driver.findElement(a.forgpuid).sendKeys("Admin");
+		Thread.sleep(500);
+		driver.findElement(a.restpass).click();
+		Thread.sleep(1000);
+		
+		boolean restSuccess = driver.findElement(a.restdone).isDisplayed();
+		SoftAssert s7 = new SoftAssert();
+		s7.assertEquals(restSuccess, true);
+		if (restSuccess==true) {
+			System.out.println("Test Case Success");
+			String s = driver.findElement(a.restdone).getText();
+			System.out.println(s);
+		}else {System.out.println("Test Case Failed");}	
+	}
+	
 	@AfterMethod
 	public void CloseH() {
 		driver.close();

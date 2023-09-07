@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project1.SubmitCancel">
+      <class name="project1.Homepage">
         <methods>
           <include name="CloseH"/>
-          <include name="LaunchPIM"/>
-          <include name="Tc22"/>
+          <include name="ForgP1"/>
+          <include name="LaunchH"/>
         </methods>
-      </class> <!-- project1.SubmitCancel -->
+      </class> <!-- project1.Homepage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

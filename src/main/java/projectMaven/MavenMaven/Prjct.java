@@ -8,8 +8,7 @@ public class Prjct {
 		
 		Homepage h = new Homepage();
 		
-		h.Tc1();
-		h.Tc2();
+	
 
 	}
 
