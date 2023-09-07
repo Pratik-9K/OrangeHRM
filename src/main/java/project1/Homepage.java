@@ -118,7 +118,7 @@ public class Homepage {
 		}else {System.out.println("Test Case Failed");}	
 	}
 	
-	@Test (priority = 6) // verifying forgot pass with empty UID
+	@Test (priority = 6) // verifying forgot pass link send detected means Pass
 	public void ForgP3() throws Exception {
 		driver.findElement(a.forgpwd).click();
 		Thread.sleep(500);
