@@ -32,7 +32,7 @@ public class ProfilePic {
 		driver.findElement(a.huid).sendKeys("Admin");
 		driver.findElement(a.hpwd).sendKeys("admin123");
 		driver.findElement(a.hlogbt).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		
 		driver.findElement(a.pim).click();
 		Thread.sleep(1500);

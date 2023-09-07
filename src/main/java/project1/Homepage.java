@@ -25,7 +25,7 @@ public class Homepage {
 		driver.findElement(a.huid).sendKeys("Admin");
 		driver.findElement(a.hpwd).sendKeys("admin123");
 		driver.findElement(a.hlogbt).click();
-		Thread.sleep(500);
+		Thread.sleep(1000);
 		
 		boolean pimDisplay = driver.findElement(a.pim).isDisplayed();
 		SoftAssert s1 = new SoftAssert();
