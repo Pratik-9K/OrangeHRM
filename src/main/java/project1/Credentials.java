@@ -1,5 +1,7 @@
 package project1;
 
+import static org.testng.Assert.ARRAY_MISMATCH_TEMPLATE;
+
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -39,7 +41,7 @@ public class Credentials {
 		driver.findElement(a.lasn).sendKeys("Levin");
 		Thread.sleep(500);
 		
-		driver.findElement(a.pic).click();;
+		/*driver.findElement(a.pic).click();;
 		Thread.sleep(2000);
 		Robot rb = new Robot();
 		rb.delay(2000);
@@ -50,7 +52,7 @@ public class Credentials {
 		rb.keyRelease(KeyEvent.VK_CONTROL);
 		rb.keyRelease(KeyEvent.VK_V);
 		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
+		rb.keyRelease(KeyEvent.VK_ENTER);*/
 		
 		driver.findElement(a.crtlog).click();
 		Thread.sleep(1000);
@@ -73,7 +75,7 @@ public class Credentials {
 			System.out.println(a2);
 		}else {System.out.println("Test Case Failed");}
 		
-		driver.findElement(a.disabt).click();
+		driver.findElement(a.enabt).click();
 		boolean enable = driver.findElement(a.enabt).isEnabled();
 		SoftAssert s2 = new SoftAssert();
 		s2.assertEquals(enable, true);
@@ -83,5 +85,126 @@ public class Credentials {
 			System.out.println(a2);
 		}else {System.out.println("Test Case Failed");}
 	}
-
+	
+	@Test (priority = 2) // Saving without(Empty) credentials
+	public void Tc16() {
+		driver.findElement(a.savebt).click();
+		
+		boolean idRequired = driver.findElement(a.requid).isDisplayed();
+		SoftAssert s3 = new SoftAssert();
+		s3.assertEquals(idRequired, true);
+		if (idRequired==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.requid).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+		boolean passRequired = driver.findElement(a.reqpwd).isDisplayed();
+		SoftAssert s4 = new SoftAssert();
+		s3.assertEquals(passRequired, true);
+		if (passRequired==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.reqpwd).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+	}
+	
+	@Test (priority = 3) // Filling less than mentioned characters
+	public void Tc17() throws Exception {
+		
+		driver.findElement(a.cluid).sendKeys("kevi");
+		driver.findElement(a.clpwd).sendKeys("kevi");
+		Thread.sleep(1000);
+		driver.findElement(a.savebt).click();
+		
+		boolean id5 = driver.findElement(a.lessuid).isDisplayed();
+		SoftAssert s5 = new SoftAssert();
+		s5.assertEquals(id5, true);
+		if (id5==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.lessuid).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+		boolean pass7 = driver.findElement(a.lesspwd).isDisplayed();
+		SoftAssert s6 = new SoftAssert();
+		s6.assertEquals(pass7, true);
+		if (pass7==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.lesspwd).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+	}
+	
+	@Test (priority = 4) // Valid UID Invalid Pass
+	public void Tc18() throws Exception {
+		
+		driver.findElement(a.cluid).sendKeys("Kevin@123!#");
+		driver.findElement(a.clpwd).sendKeys("KEVINNN");
+		Thread.sleep(1000);
+		driver.findElement(a.savebt).click();
+		
+		boolean smallChar = driver.findElement(a.onesmall).isDisplayed();
+		SoftAssert s7 = new SoftAssert();
+		s7.assertEquals(smallChar, true);
+		if (smallChar==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.onesmall).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+	}
+	
+	@Test (priority = 5) // Valid UID Invalid Pass
+	public void Tc19() throws Exception {
+		
+		driver.findElement(a.cluid).sendKeys("Kevin@123!#");
+		driver.findElement(a.clpwd).sendKeys("Kevinnn");
+		Thread.sleep(1000);
+		driver.findElement(a.savebt).click();
+		
+		boolean numChar = driver.findElement(a.onenum).isDisplayed();
+		SoftAssert s8 = new SoftAssert();
+		s8.assertEquals(numChar, true);
+		if (numChar==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.onenum).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+	}
+	
+	@Test (priority = 6) // Valid UID & pass, empty confirm pass
+	public void Tc20() throws Exception {
+		
+		driver.findElement(a.cluid).sendKeys("Kevin@123!#");
+		driver.findElement(a.clpwd).sendKeys("Kevin@619");
+		driver.findElement(a.savebt).click();
+		Thread.sleep(1000);
+		
+		boolean confPass = driver.findElement(a.confreq).isDisplayed();
+		SoftAssert s9 = new SoftAssert();
+		s9.assertEquals(confPass, true);
+		if (confPass==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.confreq).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+	}
+	
+	@Test (priority = 7) //  Confirm pass mismatch
+	public void Tc21() throws Exception {
+		
+		driver.findElement(a.cluid).sendKeys("Kevin@123!#");
+		driver.findElement(a.clpwd).sendKeys("Kevin@619");
+		driver.findElement(a.clcpwd).sendKeys("Kevin@");
+		driver.findElement(a.savebt).click();
+		Thread.sleep(1000);
+		
+		boolean mismtchPass = driver.findElement(a.pwmismatch).isDisplayed();
+		SoftAssert s10 = new SoftAssert();
+		s10.assertEquals(mismtchPass, true);
+		if (mismtchPass==true) {
+			System.out.println("Test Case Success");
+			String a2 = driver.findElement(a.pwmismatch).getText();
+			System.out.println(a2);
+		}else {System.out.println("Test Case Failed");}
+	}
+	
 }

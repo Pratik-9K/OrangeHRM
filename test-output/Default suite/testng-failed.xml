@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project1.SelPIM">
+      <class name="project1.SubmitCancel">
         <methods>
-          <include name="LaunchPIM"/>
           <include name="CloseH"/>
-          <include name="Tc7"/>
-          <include name="Tc9"/>
-          <include name="Tc8"/>
+          <include name="LaunchPIM"/>
+          <include name="Tc22"/>
         </methods>
-      </class> <!-- project1.SelPIM -->
+      </class> <!-- project1.SubmitCancel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
