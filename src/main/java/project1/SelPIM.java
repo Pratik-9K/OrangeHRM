@@ -2,6 +2,7 @@ package project1;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
@@ -16,7 +17,8 @@ public class SelPIM {
 	
 	@BeforeMethod
 	public void LaunchPIM() throws Exception {
-		driver = new EdgeDriver();
+		System.setProperty("webdriver.chrome.driver", "E:\\ST by Manas\\JARs\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window();
 		Thread.sleep(1000);

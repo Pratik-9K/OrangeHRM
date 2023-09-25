@@ -6,6 +6,7 @@ import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -19,7 +20,8 @@ public class SubmitCancel {
 	
 	@BeforeMethod
 	public void LaunchPIM() throws Exception {
-		driver = new EdgeDriver();
+		System.setProperty("webdriver.chrome.driver", "E:\\ST by Manas\\JARs\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window();
 		Thread.sleep(1000);

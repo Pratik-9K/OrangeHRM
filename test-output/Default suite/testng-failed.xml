@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project1.Homepage">
+      <class name="project1.AddEmpInPIMTests">
         <methods>
-          <include name="CloseH"/>
-          <include name="ForgP1"/>
-          <include name="LaunchH"/>
+          <include name="closeBrowser"/>
+          <include name="Tc7"/>
+          <include name="Tc6"/>
+          <include name="startBrowser"/>
         </methods>
-      </class> <!-- project1.Homepage -->
+      </class> <!-- project1.AddEmpInPIMTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

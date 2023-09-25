@@ -24,7 +24,8 @@ public class ProfilePic {
 	
 	@BeforeMethod
 	public void LaunchPIM() throws Exception {
-		driver = new EdgeDriver();
+		System.setProperty("webdriver.chrome.driver", "E:\\ST by Manas\\JARs\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		driver.manage().window();
 		Thread.sleep(1000);

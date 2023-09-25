@@ -1,7 +1,9 @@
 package project1;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.FindBy;
 
 public class OrHRMElementso {
@@ -9,15 +11,15 @@ public class OrHRMElementso {
 	// Login Page Locators
 	By huid = By.name("username");
 	By hpwd = By.name("password");
-	By hlogbt = By.xpath("/html/body/div/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button");
-	By invalert = By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/div/div[1]/div[1]/p");
-	By hreq = By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[1]/div/span");
-	By forgpwd = By.xpath("//*[@id=\"app\"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[4]/p");
-	By forgpuid = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[1]/div/div[2]/input");
-	By forgpreq = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[1]/div/span");
-	By forgpcanc = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[2]/button[1]");
-	By restpass = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/form/div[2]/button[2]");
-	By restdone = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div/h6");
+	By hlogbt = By.xpath("//button[text()=' Login ']");
+	By invalert = By.xpath("//p[text()='Invalid credentials']");
+	By hreq = By.xpath("//span[text()='Required']");
+	By forgpwd = By.xpath("//p[text()='Forgot your password? ']");
+	By forgpuid = By.xpath("//input[@placeholder='Username']");
+	By forgpreq = By.xpath("//span[text()='Required']");
+	By forgpcanc = By.xpath("//button[text()=' Cancel ']");
+	By restpass = By.xpath("//button[text()=' Reset Password ']");
+	By restdone = By.xpath("//h6[text()='Reset Password link sent successfully']");
 	
 	
 	// Selecting PIM Module & Add Employee
@@ -60,5 +62,10 @@ public class OrHRMElementso {
 	By savebt = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/form/div[2]/button[2]");
 	By ename = By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div/div/div[1]/div[1]/div[1]/h6");
 	By emplist = By.xpath("//*[@id=\"app\"]/div[1]/div[1]/header/div[2]/nav/ul/li[2]/a");
+	
+	
+	
 
 }
+
+
