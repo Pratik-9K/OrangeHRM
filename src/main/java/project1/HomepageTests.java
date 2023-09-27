@@ -8,6 +8,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -18,24 +19,22 @@ public class HomepageTests extends Baseclass {
 	Homepage home;
 	
 	
-	@Test (priority = 1) 
-	public void Tc1() throws Exception {
+	@Test (priority = 1, dataProvider = "homepageData1") 
+	public void Tc1(String uid1, String pass1) throws Exception {
 		home = new Homepage(driver);
-		home.typeLogin("Admin", "admin123");
+		home.typeLogin(uid1, pass1);
 		home.verifyLoginByLocatingPIM();
 	}
-	
-	@Test (priority = 2) 
-	public void Tc2() throws Exception {
+	@Test (priority = 2, dataProvider = "homepageData2") 
+	public void Tc2(String uid2, String pass2) throws Exception {
 		home = new Homepage(driver);
-		home.typeLogin("", "");
+		home.typeLogin(uid2, pass2);
 		home.verifyRequired();
 	}
-	
-	@Test (priority = 3) 
-	public void Tc3() throws Exception {
+	@Test (priority = 3, dataProvider = "homepageData3") 
+	public void Tc3(String uid3, String pass3) throws Exception {
 		home = new Homepage(driver);
-		home.typeLogin("Admin", "a1 *");
+		home.typeLogin(uid3, pass3);
 		home.verifyInvalidCredentials();
 	}
 	@Test (priority = 4) 
@@ -43,11 +42,27 @@ public class HomepageTests extends Baseclass {
 		home = new Homepage(driver);
 		home.verifyforgotPassBTandClickCancel(null);
 	}
-	
-	@Test (priority = 5) 
-	public void Tc5() throws Exception {
+	@Test (priority = 5, dataProvider = "homepageData4") 
+	public void Tc5(String uid4) throws Exception {
 		home = new Homepage(driver);
-		home.verifyforgotPassBTandSubmitUID("Admin");
+		home.verifyforgotPassBTandSubmitUID(uid4);
+	}
+	
+	@DataProvider (name = "homepageData1")
+	public Object[][] dataProviderMethod1() {
+		return new Object[][] {{"Admin", "admin123"}};
+	}
+	@DataProvider (name = "homepageData2")
+	public Object[][] dataProviderMethod2() {
+		return new Object[][] {{"", ""}};
+	}
+	@DataProvider (name = "homepageData3")
+	public Object[][] dataProviderMethod3() {
+		return new Object[][] {{"Admin", "a1 *"}};
+	}
+	@DataProvider (name = "homepageData4")
+	public Object[][] dataProviderMethod4() {
+		return new Object[][] {{"Admin"}};
 	}
 	
 }

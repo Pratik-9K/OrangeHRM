@@ -68,5 +68,6 @@ public class Homepage extends Baseclass {
 		SoftAssert s1 = new SoftAssert();
 		s1.assertEquals(resetMsg, true);
 	}
+	
 
 }

@@ -15,10 +15,11 @@ Folder structure:-
   - main
     - java
       - project1
-            - Credentials.java (Verifies the TCs of creating credentials)
-            - Homepage.java (Verifies the TCs of Homepage for Login)
-            - OHRMElements.java
-            - OrHRMElementso.java (Contains the elements )
-            - ProfilePic.java (Verifies the TCs for Uploading a Profile pic)
-            - SelPIM.java (Verifies the TCs for employee name and ID)
-            - SubmitCancel.java (Verifies the TCs for cancel and submit button)
+            - AddEmpCreateLoginDetailsTests.java
+            - AddEmpInPIM.java
+            - AddEmpInPIMTests.java
+            - AddEmpProfilePicTest.java
+            - Baseclass.java
+            - Homepage.java
+            - HomepageTests.java
+       - project1.profilePics

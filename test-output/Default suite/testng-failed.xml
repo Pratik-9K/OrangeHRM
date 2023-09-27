@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="project1.AddEmpInPIMTests">
+      <class name="project1.AddEmpProfilePicTest">
         <methods>
+          <include name="Tc16" invocation-numbers="0"/>
           <include name="closeBrowser"/>
-          <include name="Tc7"/>
-          <include name="Tc6"/>
           <include name="startBrowser"/>
         </methods>
-      </class> <!-- project1.AddEmpInPIMTests -->
+      </class> <!-- project1.AddEmpProfilePicTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
