@@ -22,4 +22,6 @@ Folder structure:-
             - Baseclass.java
             - Homepage.java
             - HomepageTests.java
+            - TC_DOCUMENT_REFERENCE.xlsx
+            - TEST_SCENARIO_REFERENCE.xlsx
        - project1.profilePics
